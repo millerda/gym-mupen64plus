@@ -168,7 +168,9 @@ class Mupen64PlusEnv(gym.Env):
                         res_w=config['SCR_W'],
                         res_h=config['SCR_H'],
                         res_d=config['SCR_D'],
-                        input_driver_path=config['INPUT_DRIVER_PATH']):
+                        input_driver_path=config['INPUT_DRIVER_PATH']
+                        video_plugin_path=config['VIDEO_PLUGIN_PATH'],
+                        rsp_plugin_path=config['RSP_PLUGIN_PATH'):
 
         rom_path = os.path.abspath(
             os.path.join(os.path.dirname(inspect.stack()[0][1]),
@@ -191,6 +193,9 @@ class Mupen64PlusEnv(gym.Env):
                "%ix%i" % (res_w, res_h),
                "--input",
                input_driver_path,
+               "--gfx",
+               video_plugin_path,
+               "--rsp",
                rom_path]
 
         initial_disp = os.environ["DISPLAY"]
