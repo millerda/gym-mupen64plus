@@ -1,7 +1,7 @@
 # The port number to use for the controller server:
 PORT_NUMBER: 8082
 
-# How long, at most, in seconds to block waiting for the controller 
+# How long, at most, in seconds to block waiting for the controller
 #   server to send controls (the action) before returning:
 ACTION_TIMEOUT: 5
 
@@ -27,3 +27,5 @@ MUPEN_CMD: mupen64plus
 
 # The path to the mupen64plus input driver:
 INPUT_DRIVER_PATH: /usr/local/lib/mupen64plus/mupen64plus-input-bot.so
+VIDEO_PLUGIN_PATH: /usr/local/lib/mupen64plus/mupen64plus-video-rice.so
+RSP_PLUGIN_PATH: /usr/local/lib/mupen64plus/mupen64plus-rsp-hle.so
